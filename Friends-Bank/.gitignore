@@ -1,1 +1,27 @@
+# Compiled class file
+*.class
+
+# Log files
+*.log
+
+# Package files
+*.jar
+*.war
+*.ear
+
+# IDE files and folders
+.classpath
+.project
+.settings/
+*.iml
+.idea/
+
+# Dependency directories
 /target/
+/lib/
+/bin/
+
+# Other build files
+build/
+dist/
+out/
