@@ -13,10 +13,10 @@ public class Group {
 	private ArrayList<Member> trustyList;
 	
 	/**
-	 * Cria um Group.
+	 * Creates a Group.
 	 * 
 	 * @require name != null 
-	 * @param String name 	O name do grupo
+	 * @param String name 	The group name
 	 */
 	public Group(String name) {
 		this.id = new Random().nextInt(11);
@@ -27,7 +27,7 @@ public class Group {
 	}
 	
 	/**
-	 * Devolve o id  
+	 * Returns the id  
 	 * @return int
 	 */
 	public int getId() {
@@ -36,7 +36,7 @@ public class Group {
 	
 	
 	/**
-	 * Devolve o name  
+	 * Returns the name  
 	 * @return String
 	 */
 	public String getName() {
@@ -44,7 +44,7 @@ public class Group {
 	}
 	
 	/**
-	 * Devolve o Fiel Deposit�rio do ArrayList
+	 * Returns the Trusty Depositary from the ArrayList
 	 * @return Member
 	 */
 	public Member getDepositary() {
@@ -53,34 +53,33 @@ public class Group {
 	}
 	
 	/**
-	 * Adiciona um membro ao grupo. � dado um User e criado um
-	 * Member com os mesmo dados e adicionado � members.
+	 * Adds a group member to the group. Turns a User into a Group Member
 	 * @require user != null
-	 * @param User user	O utilizador a ser adicionado 
+	 * @param User user	The User to be added 
 	 */
 	public Member addMember(User user) {
 		id = user.getId();
 		name = user.getName();
 		Account account = user.getAccount();
-		Member mem = new Member(id, name, this, account);
-		members.add(mem);
-		System.out.println(getName() + " tem de adicionar fundos � sua conta virtual \n" );
-		return mem;
+		Member member = new Member(id, name, this, account);
+		members.add(member);
+		System.out.println(getName() + " need to add funds to your virtual account \n" );
+		return member;
 	}
 	
 	/**
-	 * Adiciona um fiel deposit�rio. � dado um User e criado um
-	 * Member com os mesmo dados e adicionado � trustyList.
+	 * Adds a Trusty Depositary. Given a User, its created a Member
+	 * with the same info and its added to the trustyList.
 	 * @require user != null
-	 * @param User user	O utilizador a ser adicionado 
+	 * @param User user	The User to be added 
 	 */
 	public void addTrustyDepositary(User user) {
 		id = user.getId();
 		name = user.getName();
 		Account account = user.getAccount();
-		Member mem = new Member(id, name, this, account);
-		trustyList.add(mem);
-		members.add(mem);
+		Member member = new Member(id, name, this, account);
+		trustyList.add(member);
+		members.add(member);
 		
 	}
 	

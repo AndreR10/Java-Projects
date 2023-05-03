@@ -13,11 +13,10 @@ public class Payment {
 	
 
 	/**
-	 * Creates a Payment.
-	 * 
+	 * Creates a Payment object.
 	 * @require mem != null, value != null 
-	 * @param Member mem 	The member that will be paied
-	 * @param double value	The value to pay
+	 * @param Member mem 	The member that will receive the payment
+	 * @param double value	The value to be paid
 	 */
 	public Payment(Member mem, double value) {
 		this.id = new Random().nextInt(11);
@@ -27,15 +26,15 @@ public class Payment {
 	}
 	
 	/**
-	 * Returns the value  
-	 * @return double
+	 * Returns a value  
+	 * @return double the value
 	 */
 	public double getValue() {
 		return value;
 	}
 	
 	/**
-	 * Efectua o pagamento ao destinat�rio  
+	 * Executes the payment to the recepient
 	 */
 	public void submit() {
 		recipient.getAccount().addsValueRealBalance(value);

@@ -4,7 +4,7 @@
   <groupId>pt.ulisboa.ciencias.di</groupId>
   <artifactId>projectoADS_2020</artifactId>
   <version>1.0.0-beta</version>
-  <description>Banca de Amigos</description>
+  <description>Friends Bank</description>
   <packaging>jar</packaging>
   
   <properties>
@@ -13,9 +13,9 @@
   
   <developers>
       <developer>
-          <id>celourenco</id>
-          <name>Carlos Lourenco</name>
-          <email>celourenco@fc.ul.pt</email>
+          <id>aramos</id>
+          <name>Andre Ramos</name>
+          <email>andrem.tramos@gmail.com</email>
           <properties>
               <active>true</active>
           </properties>

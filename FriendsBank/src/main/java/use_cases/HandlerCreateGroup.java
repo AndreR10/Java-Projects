@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import business.*; 
 
 /**
- * @author Andr� Ramos, 53299
+ * @author Andre Ramos, 53299
  * 
  */
 public class HandlerCreateGroup {

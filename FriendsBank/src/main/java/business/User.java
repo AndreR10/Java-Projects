@@ -2,7 +2,7 @@ package business;
 
 import java.util.Random;
 /**
- * @author Andr� Ramos, 53299
+ * @author Andre Ramos, 53299
  */
 
 public class User {
@@ -12,10 +12,10 @@ public class User {
 	private Account account;
 	
 	/**
-	 * Cria um User.
+	 * Creates a User object.
 	 * 
 	 * @require name != null 
-	 * @param String name 	O name do utilizador
+	 * @param String name 	the name of the User
 	 */
 	public User(String name) {
 		this.id = new Random().nextInt(11);
@@ -24,24 +24,24 @@ public class User {
 	}
 	
 	/**
-	 * Devolve o id  
-	 * @return int
+	 * Returns a id  
+	 * @return int the id
 	 */
 	public int getId() {
 		return id;
 	}
 	
 	/**
-	 * Devolve o name  
-	 * @return String
+	 * Returns a name  
+	 * @return String the name
 	 */
 	public String getName() {
 		return name;
 	}
 	
 	/**
-	 * Devolve a conta  
-	 * @return Conta
+	 * Returns an account  
+	 * @return Account the account
 	 */
 	public Account getAccount() {
 		return account;
@@ -49,9 +49,9 @@ public class User {
 	
 	
 	/**
-	 * Cria um grupo com o name dado e adiciona este utilizador como
-	 * seu Fiel Deposit�rio  
-	 * @return Group
+	 * Creates and returns a group with a name and adds the user as Trusty Depositary
+	 * @param String name	the group name
+	 * @return Group 	the group object
 	 */
 	public Group createGroup(String name) {
 		Group group = new Group(name);
@@ -66,8 +66,8 @@ public class User {
 	
 	public String toString() {
 		StringBuilder sb = new StringBuilder();
-		sb.append("Sou o " + getName() + "\n");
-		sb.append("Saldo Real = " + account.getRealBalance());
+		sb.append("I am " + getName() + "\n");
+		sb.append("Real Balance = " + account.getRealBalance());
 		return sb.toString(); 
 	}
 }

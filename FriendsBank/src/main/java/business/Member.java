@@ -2,7 +2,7 @@ package business;
 
 import java.util.Random;
 /**
- * @author Andr� Ramos, 53299
+ * @author Andre Ramos, 53299
  */
 public class Member {
 	
@@ -38,7 +38,7 @@ public class Member {
 	}
 	
 	/**
-	 * Devolve o id do membro 
+	 * Returns the Member id 
 	 * @return int id
 	 */
 	public String getName() {
@@ -46,7 +46,7 @@ public class Member {
 	}
 	
 	/**
-	 * Devolve a conta do membro 
+	 * Returns the Member's Account 
 	 * @return Conta conta
 	 */
 	public Account getAccount() {
@@ -54,13 +54,17 @@ public class Member {
 	}
 	
 	/**
-	 * Devolve o saldo virtual da conta
+	 * Returns the virtual balance
 	 * @return double 
 	 */
 	public double getBalance() {
 		return account.getVirtualBalance();
 	}
 	
+	/**
+	 * Returns the decision of a User joining a group
+	 * @return String accepted or rejected depending on the number of vote  
+	 */
 	public String vote() {
 		int vote = new Random().nextInt(2);
 		if(vote == 1) {
@@ -70,20 +74,22 @@ public class Member {
 		}
 	}
 	
+	/**
+	 * Adds a value to the Trusty Depositary Account
+	 * @param double the value to be added 
+	 */
 	public void increaseAccount(double value) {
 		Account trustyAccount = group.getDepositary().getAccount();
 		trustyAccount.addsValueRealBalance(value);
-		account.subtractsValueRealBalance(value);
+		// account.subtractsValueRealBalance(value);
 		// account.addValue(value);
 	}
 	
 	/**
-	 * Efetua o pagamento entre dois members de um group
-	 * Cria um objecto do tipo pagamento com o membro que ser� pago e o valor a pagar
-	 * subtraindo esse valor da conta virtual do membro que iniciou o processo
+	 * Makes a payment on behalf of a member and subtracts the payment amount from the member's virtual balance.
 	 * @require Member mem != null, valor != null
-	 * @param  Member mem  	O membro que ser� pago
-	 * @param double valor 	O valor a pagar
+	 * @param  Member mem  	the member receiving the payment 
+	 * @param double value 	the amount to be paid
 	 */
 	public void pay(Member mem, double value) {
 		Payment payment = new Payment(mem, value);
