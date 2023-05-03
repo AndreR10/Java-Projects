@@ -47,5 +47,7 @@ __OR__
 [Maven](https://maven.apache.org/index.html)
 
 
+## UML
 
+![UML Class Diagram](https://github.com/AndreR10/Java-Projects/blob/main/FriendsBank/Modelo%20de%20Dominio-Diagrama%20de%20Classes.jpg)
 
