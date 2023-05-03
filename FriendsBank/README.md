@@ -11,5 +11,41 @@ In the best scenario, each friend makes only 1 initial deposit (a bank transfer)
 
 In the aforementioned contract, the Trusty Depository commits to maintaining in the main account an amount equal to or greater than the sum of the reinforcements of all the friends (including their own reinforcements).
 
+## Dependencies
+
+This project requires:
+
+- Java 17 
+- Maven 3.8.1
+
+## Run Locally
+
+#### Clone the project
+
+```bash
+  git clone https://github.com/AndreR10/Java-Projects.git
+```
+
+#### Go to the project directory
+
+```bash
+  cd FriendsBank
+```
+
+#### Install dependencies
+
+Using a package manager
+
+__macOS__
+
+```bash
+  brew install maven
+```
+
+__OR__
+
+[Maven](https://maven.apache.org/index.html)
+
+
 
 
